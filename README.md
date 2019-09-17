@@ -19,56 +19,25 @@ The BFM includes code to
 
 A MyHDL model of the Xilinx Ultrascale PCIe hard core is included in pcie_us.py. This module can be used in combination with the PCIe BFM to test a MyHDL or Verilog design that targets a Xilinx Ultrascale FPGA. The model currently only supports operation as a device, not as a root port.
 
-#### Arbiter module
-General-purpose parametrizable arbiter. Supports priority and round-robin arbitration. Supports blocking until request release or acknowledge.
-
-#### Axis_arb_mux module
-Frame-aware AXI stream arbitrated muliplexer with parametrizable data width and port count. Supports priority and round-robin arbitration.
-
-#### Pcie_axi_dma_desc_mux module
-Descriptor multiplexer/demultiplexer for PCIe AXI DMA module. Enables sharing the PCIe AXI DMA module between multiple request sources, interleaving requests and distributing responses.
-
-#### Pcie_tag_manager module
-PCIe in-flight tag manager.
-
-#### Pcie_us_axi_dma module
-PCIe AXI DMA module for Xilinx Ultrascale series FPGAs. Supports 64, 128, and 256 bit datapaths. Parametrizable AXI burst length. Wrapper for pcie_us_axi_dma_rd and pcie_us_axi_dma_wr
-
-#### Pcie_us_axi_dma_rd module
-PCIe AXI DMA module for Xilinx Ultrascale series FPGAs. Supports 64, 128, and 256 bit datapaths. Parametrizable AXI burst length.
-
-#### Pcie_us_axi_dma_wr module
-PCIe AXI DMA module for Xilinx Ultrascale series FPGAs. Supports 64, 128, and 256 bit datapaths. Parametrizable AXI burst length.
-
-#### Pcie_us_axi_master module
-PCIe AXI master module for Xilinx Ultrascale series FPGAs. Supports 64, 128, and 256 bit datapaths. Parametrizable AXI burst length. Wrapper for pcie_us_axi_master_rd and pcie_us_axi_master_wr.
-
-#### Pcie_us_axi_master_rd module
-PCIe AXI master module for Xilinx Ultrascale series FPGAs. Supports 64, 128, and 256 bit datapaths. Parametrizable AXI burst length.
-
-#### Pcie_us_axi_master_wr module
-PCIe AXI master module for Xilinx Ultrascale series FPGAs. Supports 64, 128, and 256 bit datapaths. Parametrizable AXI burst length.
-
-#### Pcie_us_axil_master module
-PCIe AXI lite master module for Xilinx Ultrascale series FPGAs. Supports 64, 128, and 256 bit PCIe interfaces.
-
-#### Pcie_us_axis_cq_demux module
-Demux module for Xilinx Ultrascale CQ interface. Can be used to route incoming requests based on function, BAR, and other fields. Supports 64, 128, and 256 bit datapaths.
-
-#### Pcie_us_axis_rc_demux module
-Demux module for Xilinx Ultrascale RC interface. Can be used to route incoming completions based on the requester ID (function). Supports 64, 128, and 256 bit datapaths.
-
-#### Pcie_us_cfg module
-Configuration shim for Xilinx Ultrascale series FPGAs.
-
-#### Pcie_us_msi module
-MSI shim for Xilinx Ultrascale series FPGAs.
-
-#### Priority_encoder module
-Parametrizable priority encoder.
-
-#### Pulse_merge module
-Parametrizable pulse merge module. Combines several single-cycle pulse status signals together.
+| Module | Functional Description |
+| --------- | ------------------------ |
+| **Arbiter module** | General-purpose parametrizable arbiter. Supports priority and round-robin arbitration. Supports blocking until request release or acknowledge. |
+| **Axis_arb_mux module** | Frame-aware AXI stream arbitrated muliplexer with parametrizable data width and port count. Supports priority and round-robin arbitration |
+| **Pcie_axi_dma_desc_mux module** | Descriptor multiplexer/demultiplexer for PCIe AXI DMA module. Enables sharing the PCIe AXI DMA module between multiple request sources, interleaving requests and distributing responses |
+| **Pcie_tag_manager module** | PCIe in-flight tag manager |
+| **Pcie_us_axi_dma module** | PCIe AXI DMA module for Xilinx Ultrascale series FPGAs. Supports 64, 128, and 256 bit datapaths. Parametrizable AXI burst length. Wrapper for pcie_us_axi_dma_rd and pcie_us_axi_dma_wr |
+| **Pcie_us_axi_dma_rd module** | PCIe AXI DMA module for Xilinx Ultrascale series FPGAs. Supports 64, 128, and 256 bit datapaths. Parametrizable AXI burst length |
+| **Pcie_us_axi_dma_wr module** | PCIe AXI DMA module for Xilinx Ultrascale series FPGAs. Supports 64, 128, and 256 bit datapaths. Parametrizable AXI burst length |
+| **Pcie_us_axi_master module** | PCIe AXI master module for Xilinx Ultrascale series FPGAs. Supports 64, 128, and 256 bit datapaths. Parametrizable AXI burst length. Wrapper for pcie_us_axi_master_rd and pcie_us_axi_master_wr |
+| **Pcie_us_axi_master_rd module** | PCIe AXI master module for Xilinx Ultrascale series FPGAs. Supports 64, 128, and 256 bit datapaths. Parametrizable AXI burst length |
+| **Pcie_us_axi_master_wr module** | PCIe AXI master module for Xilinx Ultrascale series FPGAs. Supports 64, 128, and 256 bit datapaths. Parametrizable AXI burst length |
+| **Pcie_us_axil_master module** | PCIe AXI lite master module for Xilinx Ultrascale series FPGAs. Supports 64, 128, and 256 bit PCIe interfaces |
+| **Pcie_us_axis_cq_demux module** | Demux module for Xilinx Ultrascale CQ interface. Can be used to route incoming requests based on function, BAR, and other fields. Supports 64, 128, and 256 bit datapaths | 
+| **Pcie_us_axis_rc_demux module** | Demux module for Xilinx Ultrascale RC interface. Can be used to route incoming completions based on the requester ID (function). Supports 64, 128, and 256 bit datapaths |
+| **Pcie_us_cfg module** | Configuration shim for Xilinx Ultrascale series FPGAs |
+| **Pcie_us_msi module** | MSI shim for Xilinx Ultrascale series FPGAs |
+| **Priority_encoder module** | Parametrizable priority encoder |
+| **Pulse_merge module** | Parametrizable pulse merge module. Combines several single-cycle pulse status signals together |
 
 ### Source Files
 
@@ -103,3 +72,4 @@ individual test scripts can be run with python directly.
     tb/pcie.py           : MyHDL PCI Express BFM
     tb/pcie_us.py        : MyHDL Xilinx Ultrascale PCIe core model
 
+** BY Krishna Subramanian **
