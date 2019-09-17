@@ -72,4 +72,4 @@ individual test scripts can be run with python directly.
     tb/pcie.py           : MyHDL PCI Express BFM
     tb/pcie_us.py        : MyHDL Xilinx Ultrascale PCIe core model
 
-** BY Krishna Subramanian **
+* BY Krishna Subramanian *
